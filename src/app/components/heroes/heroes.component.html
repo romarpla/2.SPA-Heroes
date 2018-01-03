@@ -1,14 +1,16 @@
 <h1>Héroes</h1>
 <div class="card-columns">
-  <div class="card">
-    <img class="card-img-top" src="../../assets/images/aquaman.png" alt="Card image cap">
+  <div class="card animated fadeIn fast" *ngFor="let heroe of heroes; let i = index">
+    <!--Para la imagen se le ponen [] al src para que sepa que se maneja desde angular-->
+    <img class="card-img-top" [src]="heroe.img" [alt]="heroe.nombre">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      <button type="button" class="btn btn-outline-primary btn-block">
+      <h5 class="card-title">{{ heroe.nombre }}</h5>
+      <p class="card-text">{{ heroe.bio }}</p>
+      <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+      <!--<button type="button" class="btn btn-outline-primary btn-block">
         Saber mas...
-      </button>
+      </button>-->
+      <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary btn-block">Saber mas...</a>
     </div>
   </div>
 </div>
