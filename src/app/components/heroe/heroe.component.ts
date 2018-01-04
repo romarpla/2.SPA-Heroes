@@ -12,6 +12,7 @@ import { HeroesService } from '../../services/heroes.service'
 export class HeroeComponent {
   //Se importa como en cualquier otro componente
   heroe:any = {};
+  casa:string;
 
   constructor( private activatedRoute:ActivatedRoute,
     private _heroesService:HeroesService ) {

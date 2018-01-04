@@ -1,12 +1,18 @@
-<h1>{{heroe.nombre}}</h1>
+<!--Los pipes ayudan a cambiar solo visualmente la data y se identifican por usar | -->
+<h1>{{heroe.nombre | uppercase}}</h1>
 <hr>
-<div class="row">
-  <div class="col-md-4">
-    <img src="{{heroe.img}}" alt="">
-    <br><br>
-    <a href="" class=""></a>
-  </div>
-  <div class="col-md-8">
-
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <img src="{{heroe.img}}" alt="{{heroe.nombre}}">
+      <br><br>
+      <a [routerLink]="['/heroes']" class="btn btn-outline-danger btn-block">Regresar...</a>
+    </div>
+    <div class="col-md-6">
+      <!--Hay muchos tipos de pipes y están en la documentación de Angular, y se les pueden mandar parámetros con : -->
+      <h2>Primera aparición: {{heroe.aparicion | date:'y'}}</h2>
+      <p>{{heroe.bio}}</p>
+      <img src="assets/images/{{heroe.casa}}_logo.png" alt="{{heroe.casa}}">
+    </div>
   </div>
 </div>

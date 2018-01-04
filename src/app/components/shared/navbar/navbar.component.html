@@ -22,8 +22,12 @@
       
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+      <!--Se le ingresa una función a la caja de texto para que cuando se oprima la tecla enter se haga una
+        busqueda con los () y al input se le pone una etiqueta-->
+      <input class="form-control mr-sm-2" placeholder="Buscar heroe" type="text"
+      (keyup.enter) = "buscarHeroe(buscarTexto.value)" #buscarTexto>
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="button"
+      (click) = "buscarHeroe(buscarTexto.value)">Buscar</button>
     </form>
   </div>
 </nav>
