@@ -1,0 +1,24 @@
+<h1>Buscando: {{termino}}</h1>
+
+<div class="row" *ngIf="heroes.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">
+      No existen coincidencias con el termino {{ termino }}
+    </div>
+  </div>
+</div>
+<div class="card-columns">
+  <div class="card animated fadeIn fast" *ngFor="let heroe of heroes; let i = index">
+    <!--Para la imagen se le ponen [] al src para que sepa que se maneja desde angular-->
+    <img class="card-img-top" [src]="heroe.img" [alt]="heroe.nombre">
+    <div class="card-body">
+      <h5 class="card-title">{{ heroe.nombre }}</h5>
+      <p class="card-text">{{ heroe.bio }}</p>
+      <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+      <!--<button type="button" class="btn btn-outline-primary btn-block">
+        Saber mas...
+      </button>-->
+      <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary btn-block">Saber mas...</a>
+    </div>
+  </div>
+</div>
