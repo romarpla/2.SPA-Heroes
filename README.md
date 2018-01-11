@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## See a Demo
 
-You can view how this project is without download it on [Heroku](https://superhero-searcher.herokuapp.com/home)
+You can view how this project is without download it on [Heroku](https://superhero-searcher.herokuapp.com/)
 
 ## Development server
 
