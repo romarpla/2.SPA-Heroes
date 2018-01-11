@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
 
+## See a Demo
+
+You can view how this project is without download it on [Heroku](https://superhero-searcher.herokuapp.com/home)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
